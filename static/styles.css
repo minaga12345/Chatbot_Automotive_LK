@@ -1,0 +1,233 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    overflow: hidden; /* Prevents the body/page from scrolling */
+}
+
+/* Avatar styles */
+.avatar {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    border-radius: 50%; /* Round the avatar */
+    margin-right: 10px; /* Space between avatar and message */
+    vertical-align: middle; /* Align the avatar with text */
+}
+
+/* Chatbot container with fixed position */
+.chatbot-container {
+    width: 30%; /* Increased width for better spacing */
+    height: 80%;
+    background-color: #e5e5e5; /* Silver */
+    border: 2px solid #e60000; /* Red border */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Keeps the chat container fixed on the page */
+    bottom: 10px; /* Positioning from the bottom */
+    right: 10px; /* Positioning from the right */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow outside the container */
+}
+
+/* Adjust header for avatar */
+.chatbot-header {
+    display: flex;
+    align-items: center; /* Center header items */
+    background-color: #e60000; /* Red */
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chatbot-header img {
+    width: 40px; /* Avatar size for header */
+    height: 40px; /* Avatar size for header */
+    border-radius: 50%; /* Round avatar */
+    margin-right: 10px; /* Space between avatar and title */
+}
+
+.chatbot-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Header buttons for clear and minimize chat */
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.header-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 25px;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.header-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Chat area combining chat window and input */
+.chat-area {
+    flex-grow: 1; /* Allows the chat area to take the available space */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent overflow in the chat area */
+}
+
+/* Ensure chat messages are displayed in a column */
+.chat-window {
+    flex-grow: 1; /* Allows the chat window to grow and fill available space */
+    background-color: white;
+    padding: 10px;
+    overflow-y: auto; /* Allows the chat window to scroll */
+    border-bottom: 1px solid #ccc;
+    display: flex; /* Use flexbox for vertical stacking */
+    flex-direction: column; /* Stack messages vertically */
+    gap: 5px; /* Space between messages */
+}
+
+/* Input and send button container */
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5; /* Light Silver */
+    padding: 10px;
+    border-top: 1px solid #ccc; /* Adds a border on top of the input area */
+}
+
+#userMessage {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+/* Send button styling */
+.send-btn {
+    background-color: #e60000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.send-btn i {
+    font-size: 16px;
+}
+
+.send-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Scrollbar styling */
+.chat-window::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+    background-color: #e60000;
+    border-radius: 5px;
+}
+
+/* Message bubbles */
+.message {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 20px;
+    max-width: 70%; /* Allow messages to take up to 70% of the container width */
+}
+
+/* Adjust user and chatbot message alignment */
+.user-message {
+    display: flex; /* Use flex to align avatar and message */
+    align-items: center; /* Center vertically */
+    justify-content: flex-end; /* Align to the right */
+}
+
+/* User's messages aligned to the right */
+.user-message {
+    background-color: #e60000;
+    color: white;
+    align-self: flex-end; /* Align to the right */
+    text-align: right;
+    margin: 5px 0 5px 10px; /* Margin adjustments for spacing */
+    border-radius: 20px 20px 0 20px; /* Rounded */
+}
+
+.chatbot-message {
+    display: flex; /* Use flex to align avatar and message */
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align to the left */
+}
+
+/* Chatbot's messages aligned to the left */
+.chatbot-message {
+    background-color: #f1f1f1;
+    color: black;
+    align-self: flex-start; /* Align to the left */
+    text-align: left;
+    margin: 5px 10px 10px 0; /* Right margin for separation, bottom margin for vertical spacing */
+    border-radius: 20px 20px 20px 0; /* Rounded */
+    max-width: 70%; /* Ensure chatbot messages also have a max width */
+}
+
+
+/* Button styling for options like vehicles or locations */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button {
+    background-color: #e60000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+/* Styling for links */
+a {
+    color: #e60000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Minimized state for chat window */
+.minimized {
+    height: 40px; /* Only show the header when minimized */
+}
+
+.minimized .chat-window,
+.minimized .input-container {
+    display: none;
+}
